@@ -1,0 +1,40 @@
+{
+  "name": "nodefolie",
+  "version": "0.0.1",
+  "description": "THis is a personal portfolio written in Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-dev": "cross-env PORT=3000 nodemon.cmd app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebastian-WR/Node_KEA_Electoral.git"
+  },
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website",
+    "kea",
+    "node.js"
+  ],
+  "author": "Sebastian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sebastian-WR/Node_KEA_Electoral/issues"
+  },
+  "homepage": "https://github.com/Sebastian-WR/Node_KEA_Electoral#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "node-fethc": "^0.0.1-security",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": "15.x"
+  }
+}

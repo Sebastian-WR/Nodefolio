@@ -1,0 +1,22 @@
+body {
+    background-color: pink;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+#nav-logo {
+    width: 60px;
+}
+#nav-div-float-right {
+    float: right;
+}
+
+#main-content {
+    min-height: calc(100vh - 125px); /* 100 view height minus 130 px som er til footer under main content  */
+}
