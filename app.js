@@ -9,7 +9,9 @@ app.use(express.urlencoded({ extended: true })); // allows me to parse form data
 const projectsRouter = require("./routes/projects.js");
 const contactRouter = require("./routes/contact.js")
  // importing the router that we export in the projects.js
-app.use(projectsRouter.router); // gets the router in projectsRouter : using said router that is imported abov, now the app also uses this
+ const nodemailer = require('nodemailer'); // importing nodemailer
+
+ app.use(projectsRouter.router); // gets the router in projectsRouter : using said router that is imported abov, now the app also uses this
 app.use(contactRouter.router);
 
 const fs = require("fs"); // working with files write, read and open to create and so
@@ -35,6 +37,7 @@ const penv = process.env.ENV === "PRODUCTION" ? "prod" : "dev";
 // så SSR er at vi loader det hele fra server side og sender det når det er loaded altså html. og det er hurtigt når client bruger det efter det er loaded
 // client side rendering er at man sender filer osv og så render client selv alting så der kan være små loading times.
 
+// Pages
 const frontpage = fs.readFileSync(
   __dirname + "/public/frontpage/frontpage.html",
   "utf-8"
@@ -47,7 +50,20 @@ const contact = fs.readFileSync(
   __dirname + "/public/contact/contact.html",
   "utf-8"
 );
+const education = fs.readFileSync(
+  __dirname + "/public/education/education.html",
+  "utf-8"
+);
+const recommendations = fs.readFileSync(
+  __dirname + "/public/recommendations/recommendations.html",
+  "utf-8"
+);
+const skills = fs.readFileSync(
+  __dirname + "/public/skills/skills.html",
+  "utf-8"
+);
 
+// Header & footer
 const header = fs.readFileSync(
   __dirname + "/public/header/header.html",
   "utf-8"
@@ -58,6 +74,7 @@ const footer = fs.readFileSync(
 );
 // .replace ca replace things frontpage.replace("{{BODY}}", "header") example and you can stack it so a .replace could be after that one too
 
+// Serving pages
 app.get("/", (req, res) => {
   res.send(header + frontpage + footer); // take this file and send to client
 });
@@ -70,8 +87,16 @@ app.get("/contact", (req, res) => {
   res.send(header + contact + footer); // take this file and send to client
 });
 
-app.get("/", (req, res) => {
-  res.send();
+app.get("/education", (req, res) => {
+  res.send(header + education + footer); // take this file and send to client
+});
+
+app.get("/recommendations", (req, res) => {
+  res.send(header + recommendations + footer); // take this file and send to client
+});
+
+app.get("/skills", (req, res) => {
+  res.send(header + skills + footer); // take this file and send to client
 });
 
 app.listen(port, (error) => {

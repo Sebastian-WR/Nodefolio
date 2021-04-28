@@ -1,36 +1,49 @@
 
     <h1>Contact me yall!</h1>
+
+    <div style="width: 40%;">
+        <p>
+            Denne side skal eselvgølgelig styles, ellers skal der ikke jsuteres så meget,
+            mulighvis ændre så man kommer tilbage til siden efter man har submittet og så en tak for henvendelses besked, måske allert med den er sendt eller noget. 
+        </p>
+    </div>
     <!-- create a contact page and serve it and create a form on the page as well -->
 
     <!-- Create a new route! implement /api/contact the just sends a message -->
 
     <!-- Add method later in form attribute -->
     <!-- POST, GET, PUT, DELETE methods -->
-    <form action="/api/contact" method="POST">
-        <label>Name</label>
-        <input name="name" placeholder="Enter your name here">
+    <form action="/api/contact" method="POST" id="contactForm" name="contactForm">
+        <label for="name">Name</label>
+        <input id="name" name="name" placeholder="Enter your name here">
 
-        <label>Email</label>
-        <input name="email" placeholder="Enter your email here">
+        <label for="email">Email</label>
+        <input id="email" name="email" placeholder="Enter your email here">
 
-        <label>Subject</label>
-        <input name="subject" placeholder="Enter your subject here">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" placeholder="Enter your subject here">
         
-        <label>Message</label>
-        <textarea name="message" placeholder="Enter your message here" rows="15" cols="50"></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Enter your message here" rows="15" cols="50"></textarea>
 
         <button type="submit">Contact me!</button>
     </form>
     <!--  rememeber to give it a name so its sent in the form -->
 
-    <script>
+    <!-- <script>
         // get form-data(siongle line of code this part)
         // send it with fetch 
+        let contactForm = document.getElementById('contactForm');
+        let formData = new FormData(contactForm);
         fetch("/api/contact", {
             method: "POST",
-            body: JSON.stringify(FormData)
-        }).then(
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(formData => {
+            console.log('Success:', formData);
+        });
             //something 
             //send message
-        )
-        </script>
+        
+        </script> -->
