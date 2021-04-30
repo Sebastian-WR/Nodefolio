@@ -1,9 +1,56 @@
-    <h1>Look at all the recommendations i got !</h1>
-
-    <div style="width: 40%;">
-        <p>
-            Jeg vil gerne have en "Carousell" her med de recommendations der er,
-            samt mulighed for at efterlade en ny.
-            til start kan alle blive accepterest og tilføjet, men me dhenblik på de skal godkendes.
-        </p>
+    
+    <div class="container" style="margin-bottom: 3rem; text-align: center;">
+        <h3>Look at all the recommendations i got !</h3>
     </div>
+    
+
+    <style>
+        .box {
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+        height: 200px;
+        width: 50%;
+            
+      }
+    </style>
+
+    <div class="container">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #e95095;"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #ffcc00;"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: #5fad56;"></button>
+            </div>
+            <div class="carousel-inner" style="height: 21.5rem;">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <div class="box">
+                        <h5>John Doe - Amazon</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt neque sit amet lectus commodo sagittis. Vivamus velit purus, egestas a felis at, ornare tristique justo. Aliquam commodo justo a tellus consectetur pretium. Pellentesque turpis lorem, consequat id sagittis vitae, tincidunt sit amet dui. Sed bibendum hendrerit augue, at interdum purus pulvinar in. Vivamus pulvinar varius arcu, quis malesuada eros gravida at. Morbi lobortis elit dolor, et feugiat tellus finibus vel. Sed hendrerit iaculis mauris, vel rhoncus purus congue eleifend.</p>
+                    </div>
+                </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <div class="box">
+                    <h5>Jane Doe - Google</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt neque sit amet lectus commodo sagittis. Vivamus velit purus, egestas a felis at, ornare tristique justo. Aliquam commodo justo a tellus consectetur pretium. Pellentesque turpis lorem, consequat id sagittis vitae, tincidunt sit amet dui. Sed bibendum hendrerit augue, at interdum purus pulvinar in. Vivamus pulvinar varius arcu, quis malesuada eros gravida at. Morbi lobortis elit dolor, et feugiat tellus finibus vel. Sed hendrerit iaculis mauris, vel rhoncus purus congue eleifend.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="box">
+                    <h5>Plain Jane - Microsoft</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt neque sit amet lectus commodo sagittis. Vivamus velit purus, egestas a felis at, ornare tristique justo. Aliquam commodo justo a tellus consectetur pretium. Pellentesque turpis lorem, consequat id sagittis vitae, tincidunt sit amet dui. Sed bibendum hendrerit augue, at interdum purus pulvinar in. Vivamus pulvinar varius arcu, quis malesuada eros gravida at. Morbi lobortis elit dolor, et feugiat tellus finibus vel. Sed hendrerit iaculis mauris, vel rhoncus purus congue eleifend.</p>
+                </div>
+            </div>
+            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+        </div>
+    </div>
+    

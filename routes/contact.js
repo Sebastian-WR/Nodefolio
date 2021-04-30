@@ -33,7 +33,7 @@ router.post("/api/contact", (req, res) => {
     }
   });
   // todo send email to yourself
-  res.redirect("/")
+  res.redirect("/contact")
 });
 
 module.exports = {

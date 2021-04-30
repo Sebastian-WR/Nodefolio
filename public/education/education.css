@@ -23,7 +23,7 @@
 .main-timeline .timeline-content:before,
 .main-timeline .timeline-content:after{
     content: "";
-    background: linear-gradient(45deg,#F27442,#F27442,#FBD0AD);
+    background: linear-gradient(45deg,#e95095,#e95095,#ff97c6);
     position: absolute;
     top: 0;
     left: calc(100% - 120px);
@@ -31,7 +31,7 @@
     bottom: 0;
     z-index: -1;
 }
-.main-timeline .timeline-content:after{ background: linear-gradient(to top right,#F15E33 50%,transparent 51%); }
+.main-timeline .timeline-content:after{ background: linear-gradient(to top right,#ee4390 50%,transparent 51%); }
 .main-timeline .timeline-icon{
     color: #fff;
     font-size: 55px;
@@ -41,7 +41,7 @@
     right: 33px;
 }
 .main-timeline .title{
-    color: #F15E33;
+    color: #ee4390;
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
@@ -70,12 +70,12 @@
     left: 33px;
 }
 .main-timeline .timeline:nth-child(4n+2) .timeline-content:before{
-    background: linear-gradient(45deg,#47BDED,#47BDED,#C5E8FB);
+    background: linear-gradient(45deg,#ffcc00,#ffcc00,#fce9a0);
 }
 .main-timeline .timeline:nth-child(4n+2) .timeline-content:after{
-    background: linear-gradient(to top right,#009EDF 50%,transparent 51%);
+    background: linear-gradient(to top right,#f7c911 50%,transparent 51%);
 }
-.main-timeline .timeline:nth-child(4n+2) .title{ color: #009EDF; }
+.main-timeline .timeline:nth-child(4n+2) .title{ color: #f7c911; }
 .main-timeline .timeline:nth-child(4n+3) .timeline-content:before{
     background: linear-gradient(45deg,#8B71B0,#8B71B0,#C5BBDE);
 }
